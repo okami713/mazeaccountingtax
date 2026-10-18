@@ -364,59 +364,128 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form">
-          <div class="form-heading">
-            <span>CONSULTATION REQUEST</span>
-            <span class="form-required">* Required</span>
-          </div>
 
-          <div class="form-row">
-            <label for="name">
-              Full Name <span>*</span>
-              <input id="name" name="name" autocomplete="name"
-                required placeholder="Your name">
-            </label>
+<form
+  class="contact-form"
+  id="contact-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <!-- Web3Forms Configuration -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="89d77868-7be1-4e76-bfbd-99f6aff339bd"
+  >
 
-            <label for="email">
-              Email Address <span>*</span>
-              <input id="email" name="email" type="email"
-                autocomplete="email" required placeholder="you@example.com">
-            </label>
-          </div>
+  <input
+    type="hidden"
+    name="subject"
+    value="New Consultation Request - Maze Accounting & Tax"
+  >
 
-          <div class="form-row">
-            <label for="client-type">
-              I'm Looking For Help With <span>*</span>
-              <select id="client-type" name="clientType" required>
-                <option value="">Choose a service</option>
-                <option>Business tax preparation</option>
-                <option>Tax planning and advisory</option>
-                <option>Bookkeeping</option>
-                <option>Individual tax preparation</option>
-                <option>Multiple services / not sure yet</option>
-              </select>
-            </label>
+  <input
+    type="hidden"
+    name="from_name"
+    value="Maze Accounting & Tax Website"
+  >
 
-            <label for="business">
-              Business Name <small>(if applicable)</small>
-              <input id="business" name="business"
-                autocomplete="organization" placeholder="Business name">
-            </label>
-          </div>
+  <!-- Form Heading -->
+  <div class="form-heading">
+    <span>CONSULTATION REQUEST</span>
+    <span class="form-required">* Required</span>
+  </div>
 
-          <label for="message">
-            What Would You Like Help With?
-            <textarea id="message" name="message" rows="4"
-              placeholder="A brief overview is plenty. Please don't include sensitive tax or financial information."></textarea>
-          </label>
+  <!-- Name and Email -->
+  <div class="form-row">
+    <label for="name">
+      Full Name <span>*</span>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        required
+        placeholder="Your name"
+      >
+    </label>
 
-          <button class="button button-navy form-submit" type="submit">
-            Prepare Email Request →
-          </button>
+    <label for="email">
+      Email Address <span>*</span>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        placeholder="you@example.com"
+      >
+    </label>
+  </div>
 
-          <p class="form-status" id="form-status" role="status"
-            aria-live="polite"></p>
-        </form>
+  <!-- Service and Business Name -->
+  <div class="form-row">
+    <label for="client-type">
+      I'm Looking For Help With <span>*</span>
+      <select id="client-type" name="service" required>
+        <option value="">Choose a service</option>
+        <option value="Business tax preparation">
+          Business tax preparation
+        </option>
+        <option value="Tax planning and advisory">
+          Tax planning and advisory
+        </option>
+        <option value="Bookkeeping">
+          Bookkeeping
+        </option>
+        <option value="Individual tax preparation">
+          Individual tax preparation
+        </option>
+        <option value="Multiple services / not sure yet">
+          Multiple services / not sure yet
+        </option>
+      </select>
+    </label>
+
+    <label for="business">
+      Business Name <small>(if applicable)</small>
+      <input
+        id="business"
+        name="business"
+        type="text"
+        autocomplete="organization"
+        placeholder="Business name"
+      >
+    </label>
+  </div>
+
+  <!-- Message -->
+  <label for="message">
+    What Would You Like Help With?
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="A brief overview is plenty. Please don't include sensitive tax or financial information."
+    ></textarea>
+  </label>
+
+  <!-- Submit -->
+  <button
+    class="button button-navy form-submit"
+    type="submit"
+  >
+    Submit Consultation Request →
+  </button>
+
+  <p
+    class="form-status"
+    id="form-status"
+    role="status"
+    aria-live="polite"
+  ></p>
+</form>
+
       </div>
     </section>
   </main>
