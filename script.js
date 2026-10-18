@@ -4,9 +4,6 @@
  * Website interactions and consultation form.
  *
  * BEFORE LAUNCH:
- * Enter the firm's real email address below.
- * Do not use an address until it has been created
- * and you have confirmed that you can receive mail.
  */
 
 const CONTACT_EMAIL = "";

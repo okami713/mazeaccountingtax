@@ -952,6 +952,16 @@ h2 {
   margin-top: 3px;
 }
 
+<<<<<<< HEAD
+=======
+.form-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+>>>>>>> 53a1dbeed4f6eb52824fe466394197d71b617700
 .form-status {
   margin: 10px 0 0;
   color: #8a5a16;
