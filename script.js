@@ -60,9 +60,6 @@ if (form && statusMessage) {
     // Do not pretend to send a message without a real address.
     if (!CONTACT_EMAIL.trim()) {
       statusMessage.textContent =
-        "The form is ready, but the firm's email address " +
-        "must be configured in script.js before launch. " +
-        "Your information has not been sent.";
 
       statusMessage.style.color = "#8a5a16";
       return;
