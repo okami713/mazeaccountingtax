@@ -42,3 +42,43 @@ const yearElement = document.querySelector("#year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
+
+
+// GOOGLE REVIEWS CAROUSEL
+
+const reviewsTrack = document.querySelector("#reviewsTrack");
+
+const nextReviewButton = document.querySelector(".review-arrow.next");
+const previousReviewButton = document.querySelector(".review-arrow.prev");
+
+if (reviewsTrack && nextReviewButton && previousReviewButton) {
+
+  nextReviewButton.addEventListener("click", () => {
+    const reviewCard = reviewsTrack.querySelector(".google-review-card");
+
+    if (reviewCard) {
+      const gap = 20;
+      const scrollAmount = (reviewCard.offsetWidth + gap) * 3;
+
+      reviewsTrack.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  });
+
+  previousReviewButton.addEventListener("click", () => {
+    const reviewCard = reviewsTrack.querySelector(".google-review-card");
+
+    if (reviewCard) {
+      const gap = window.innerWidth <= 700 ? 14 : 20;
+      const scrollAmount = (reviewCard.offsetWidth + gap) * 3;
+
+      reviewsTrack.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  });
+
+}
